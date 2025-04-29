@@ -91,18 +91,11 @@
           <ul class="nav navbar-nav sf-menu clearfix">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li class="sub-menu sub-menu-1"><a href="services.html">Services<em></em></a>
-              <ul>
-                <li><a href="services.html">Personal Care</a></li>
-                <li><a href="services.html">Practical Care</a></li>
-                <li><a href="services.html">Training</a></li>
-                <li><a href="services.html">Other Services</a></li>
-              </ul>
-            </li>
+<li><a href="services.html">Services</a></li>
             <li><a href="career.html">Career</a></li>
             
             <li><a href="contacts.html">Contact Us</a></li>
-<li><a href="https://www.cqc.org.uk/provider/1-7940063052" target="_blank">CQC</a></li>
+<li><a href="https://www.cqc.org.uk/provider/1-7940063052/services" target="_blank">CQC</a></li>
           </ul>
         </div>
       </div>
@@ -133,7 +126,7 @@
         <p>
           Ray Care Services delivers high-quality domiciliary care for individuals residing in their own homes.
         </p>
-        <a href="mailto:admin@raycareservices.co.uk?subject=Request%20for%20In-Home%20Care&body=Hello%20Ray%20Care%20Services,%0A%0AI%20would%20like%20to%20request%20in-home%20care%20services.%20Please%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you." " class="btn-default btn1">Request In-Home Care Now</a>
+        <a href="mailto:admin@raycareservices.co.uk?subject=Request%20for%20In-Home%20Care&body=Hello%20Ray%20Care%20Services,%0A%0AI%20would%20like%20to%20request%20in-home%20care%20services.%20Please%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you."  class="btn-default btn1">Request In-Home Care Now</a>
       </div>
     </div>
 
@@ -326,14 +319,33 @@ home-care services</div>
                     If you are passionate about making a difference in people's lives and seeking a rewarding career in care, Ray Care Services is the place for you. We offer fulfilling roles where you can grow professionally while providing essential support to individuals in need.
                   </p>
                   <br>
-                    <!-- Resume Submission Form -->
-               <form action="https://formsubmit.co/admin@raycareservices.co.uk" method="POST" enctype="multipart/form-data" target="_blank">
-               <input type="hidden" name="_captcha" value="false">
-               <input type="text" name="name" placeholder="Your Name" required>
-               <input type="email" name="email" placeholder="Your Email" required><br><br>
-               <input type="file" name="resume" accept=".pdf,.doc,.docx" required><br><br>
-              <button type="submit" class="btn-default btn1">Submit Your Resume</button>
-             </form>
+<!-- Trigger Button -->
+<a href="#" class="btn-default btn1" onclick="openModal()">Submit Your Resume</a>
+
+<!-- Modal Container -->
+<div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 style="color: #3d3d47;">Submit Your Resume</h3>
+    <form action="https://formsubmit.co/admin@raycareservices.co.uk" method="POST" enctype="multipart/form-data" target="_blank">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Resume Submission - Ray Care Services">
+      <input type="hidden" name="_next" value="https://raycareservices.co.uk/thank-you.html">
+
+      <label>Your Name <span style="color: red;">*</span></label>
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <label>Your Email <span style="color: red;">*</span></label>
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <label>Upload Resume <span style="color: red;">*</span></label>
+      <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+
+      <br><br>
+      <button type="submit" class="btn-default btn1">Apply Now</button>
+    </form>
+  </div>
+</div>
                 </div>
               </div>
             </div>
@@ -406,7 +418,7 @@ home-care services</div>
 
       <div class="txt1">we have more experienced staff and do not outsource</div>
       <div class="txt2">We are registered with the Care Quality Commission</div>
-      <div class="txt3"><a href="#" class="btn-default btn1">request care now</a></div>
+      <div class="txt3"><a href="mailto:admin@raycareservices.co.uk?subject=Request%20for%20Home%20Care&body=Hello%20Ray%20Care%20Services,%0A%0AI%20would%20like%20to%20request%20home%20care%20services.%20Please%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you." class="btn-default btn1">request care now</a></div>
 
     </div>
   </div>
@@ -672,7 +684,10 @@ home-care services</div>
 
 <div class="bot2_wrapper">
   <div class="container">
-    <div class="copyright">Copyright &copy; 2025. All Rights Reserved.</div>
+    <div class="copyright">
+  Copyright &copy; <span id="currentYear"></span>. All Rights Reserved.
+</div>
+
     <ul class="menu_bottom">
       <li><a href="/about.html">About the company</a></li>
       <li><a href="#">Privacy Policy</a></li>
@@ -684,6 +699,11 @@ home-care services</div>
 
 </div>
 <script src="js/bootstrap.min.js"></script>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+
+
 
 </body>
 </html>

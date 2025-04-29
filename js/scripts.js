@@ -78,9 +78,6 @@ $(document).ready(function() {
 
 
 
-
-
-
 	/*----------------------------------------------------*/
 	// PARALLAX CALLING
 	/*----------------------------------------------------*/
@@ -123,6 +120,7 @@ $(document).ready(function() {
 
 });
 
+
 /////////////////////// load
 $(window).load(function() {
 
@@ -148,3 +146,18 @@ $(window).load(function() {
 
 
 });
+function openModal() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("resumeModal").style.display = "none";
+}
+
+// Optional: close modal when clicking outside of the modal
+window.onclick = function(event) {
+  const modal = document.getElementById("resumeModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}

@@ -211,18 +211,11 @@ $(window).load(function() {
           <ul class="nav navbar-nav sf-menu clearfix">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li class="sub-menu sub-menu-1"><a href="services.html">Services<em></em></a>
-              <ul>
-                <li><a href="services.html">Personal Care</a></li>
-                <li><a href="services.html">Practical Care</a></li>
-                <li><a href="services.html">Training</a></li>
-                <li><a href="services.html">Other Services</a></li>
-              </ul>
-            </li>
+<li><a href="services.html">Services</a></li>
             <li><a href="career.html">Career</a></li>
             <li class="active"><a href="gallery.html">Gallery</a></li>
             <li><a href="contacts.html">Contact Us</a></li>
-<li><a href="https://www.cqc.org.uk/provider/1-7940063052" target="_blank">CQC</a></li>
+<li><a href="https://www.cqc.org.uk/provider/1-7940063052/services" target="_blank">CQC</a></li>
           </ul>
         </div>
       </div>
@@ -416,7 +409,10 @@ $(window).load(function() {
 
 <div class="bot2_wrapper">
   <div class="container">
-    <div class="copyright">Copyright &copy; 2016. All Rights Reserved.</div>
+    <div class="copyright">
+  Copyright &copy; <span id="currentYear"></span>. All Rights Reserved.
+</div>
+
     <ul class="menu_bottom">
     <li><a href="/html/about.html">About the company</a></li>
       <li><a href="#">Privacy Policy</a></li>
@@ -427,6 +423,9 @@ $(window).load(function() {
 
 </div>
 <script src="js/bootstrap.min.js"></script>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
