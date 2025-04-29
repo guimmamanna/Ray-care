@@ -133,7 +133,7 @@
         <p>
           Ray Care Services delivers high-quality domiciliary care for individuals residing in their own homes.
         </p>
-        <a href="#" class="btn-default btn1">Request In-Home Care Now</a>
+        <a href="mailto:admin@raycareservices.co.uk?subject=Request%20for%20In-Home%20Care&body=Hello%20Ray%20Care%20Services,%0A%0AI%20would%20like%20to%20request%20in-home%20care%20services.%20Please%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you." " class="btn-default btn1">Request In-Home Care Now</a>
       </div>
     </div>
 
@@ -326,7 +326,14 @@ home-care services</div>
                     If you are passionate about making a difference in people's lives and seeking a rewarding career in care, Ray Care Services is the place for you. We offer fulfilling roles where you can grow professionally while providing essential support to individuals in need.
                   </p>
                   <br>
-                  <a href="#" class="btn-default btn1">submit your resume</a>
+                    <!-- Resume Submission Form -->
+               <form action="https://formsubmit.co/admin@raycareservices.co.uk" method="POST" enctype="multipart/form-data" target="_blank">
+               <input type="hidden" name="_captcha" value="false">
+               <input type="text" name="name" placeholder="Your Name" required>
+               <input type="email" name="email" placeholder="Your Email" required><br><br>
+               <input type="file" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+              <button type="submit" class="btn-default btn1">Submit Your Resume</button>
+             </form>
                 </div>
               </div>
             </div>
