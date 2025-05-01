@@ -2060,3 +2060,68 @@ h1 {
   color: #000;
   text-decoration: none;
 }
+
+.review_wrapper {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review_wrapper .title4 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.review_wrapper .title4 span {
+  color: #103f65;
+}
+
+#review-form .form-group {
+  margin-bottom: 20px;
+}
+
+#review-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#review-form input[type="text"],
+#review-form input[type="email"],
+#review-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#review-form input:focus,
+#review-form textarea:focus {
+  border-color: #103f65;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+}
+
+#review-form .btn-primary {
+  background-color: #103f65;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#review-form .btn-primary:hover {
+  background-color: #103f65;
+}
