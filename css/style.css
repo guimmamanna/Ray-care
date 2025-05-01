@@ -2060,8 +2060,7 @@ h1 {
   color: #000;
   text-decoration: none;
 }
-
-.review_wrapper {
+.greview_wrapper {
   background: #f9f9f9;
   border-radius: 10px;
   padding: 30px;
@@ -2070,7 +2069,7 @@ h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.review_wrapper .title4 {
+.greview_wrapper .title4 {
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -2078,24 +2077,24 @@ h1 {
   color: #2c3e50;
 }
 
-.review_wrapper .title4 span {
+.greview_wrapper .title4 span {
   color: #103f65;
 }
 
-#review-form .form-group {
+#greview-form .form-group {
   margin-bottom: 20px;
 }
 
-#review-form label {
+#greview-form label {
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
   color: #333;
 }
 
-#review-form input[type="text"],
-#review-form input[type="email"],
-#review-form textarea {
+#greview-form input[type="text"],
+#greview-form input[type="email"],
+#greview-form textarea {
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #ccc;
@@ -2104,14 +2103,14 @@ h1 {
   transition: border-color 0.3s ease;
 }
 
-#review-form input:focus,
-#review-form textarea:focus {
+#greview-form input:focus,
+#greview-form textarea:focus {
   border-color: #103f65;
   outline: none;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
 }
 
-#review-form .btn-primary {
+#greview-form .btn-primary {
   background-color: #103f65;
   border: none;
   padding: 12px 25px;
@@ -2122,6 +2121,6 @@ h1 {
   transition: background-color 0.3s ease;
 }
 
-#review-form .btn-primary:hover {
+#greview-form .btn-primary:hover {
   background-color: #103f65;
 }
