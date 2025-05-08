@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #103f65);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .message-container {
+      text-align: center;
+      animation: fadeInScale 2s ease-out forwards;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .message-container h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: slideIn 2s ease forwards;
+    }
+
+    .message-container p {
+      font-size: 1.2rem;
+      animation: fadeIn 3s ease-in forwards;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      opacity: 0.8;
+      animation: fall 3s infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h1>Thank You!</h1>
+    <p>Your application has been received.</p>
+  </div>
+
+  <script>
+    // Generate confetti
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = `${Math.random() * 100}vw`;
+      confetti.style.animationDuration = `${Math.random() * 2 + 2}s`;
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
+      confetti.style.animationDelay = `${Math.random()}s`;
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
