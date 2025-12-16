@@ -14,7 +14,8 @@ include 'functions.php';
 $name = stripslashes($_POST['name']);
 $email = trim($_POST['email']);
 $phone = stripslashes($_POST['phone']);
-$subject = stripslashes($_POST['subject']);
+$subject = isset($_POST['subject']) ? stripslashes($_POST['subject']) : '';
+$subject = $subject ? $subject : 'Website Contact Form';
 $message = "Site visitor information:
 
 First Name: ".$_POST['name']
@@ -50,12 +51,6 @@ $error .= 'Please enter an e-mail address.<br />';
 if($email && !ValidateEmail($email))
 {
 $error .= 'Please enter a valid e-mail address.<br />';
-}
-
-
-if(isset($_SESSION['captcha_keystring']) && strtolower($_SESSION['captcha_keystring']) != strtolower($_POST['capthca']))
-{
-$error .= "Incorect captcha.<br />";
 }
 
 
